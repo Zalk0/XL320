@@ -191,12 +191,17 @@ int XL320::getSpoonLoad(){
 	return spoon;
 }
 
-int XL320::getJointPosition(int id){
+int XL320::getJointPosition(int id) {
+    return getJointPosition(id,NULL);
+}
+
+int XL320::getJointPosition(int id, Stream *debugStream){
     unsigned char buffer[255];
     RXsendPacket(id, XL_PRESENT_POSITION, 2); 
     this->stream->flush();
     if(this->readPacket(buffer,255)>0) {
       Packet p(buffer,255);
+      if(debugStream) p.toStream(*debugStream);
       if(p.isValid() && p.getParameterCount()>=3) {
 	return (p.getParameter(1))|(p.getParameter(2)<<8);
       } else {

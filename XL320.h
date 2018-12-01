@@ -90,6 +90,7 @@ public:
 
 	int getSpoonLoad();
 	int getJointPosition(int id);
+	int getJointPosition(int id, Stream *debugStream);
 	int getJointSpeed(int id);
 	int getJointLoad(int id);
 	int getJointTemperature(int id);
