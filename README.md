@@ -9,6 +9,10 @@ Clone this repository into your Arduino libraries folder:
 
 ``` $ cd ~/Documents/Arduino/libraries/ ```
 
+Or download this repository as ZIP and add it from the Arduino app like this:
+
+``` Sketch > Include Library > Add .ZIP Library... ```
+
 Restart Arduino app. :-)
 
 Open the example Arduino sketch to see how it works:
@@ -37,6 +41,6 @@ Follow the instructions in the sketch ```XL320_servo_set_baud_rate_or_id.ino``` 
 
 Note: when setting the ServoID, the servos default down to 9600 baud, so after you set the servoID you'll need to set the baud rate back up to 115200.
 
-### More information
+### Acknowledgments
 
-Read more about this library on the [Hackerspace Adelaide Wiki](http://hackerspace-adelaide.org.au/wiki/Dynamixel_XL-320)
+Thanks to [Hackerspace Adelaide](https://github.com/hackerspace-adelaide) for doing this library.
